@@ -70,8 +70,8 @@ const Portfolio = () => {
       image: portfolio,
       technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Vite', 'Framer Motion', 'React Router'],
       category: 'web',
-      liveUrl: '#',
-      githubUrl: '#'
+      liveUrl: 'https://sumeya-portfolio-pi.vercel.app/',
+      githubUrl: 'https://github.com/Hafsusu/Sumeya-Portfolio'
     },
     {
       id: 7,
@@ -98,7 +98,7 @@ const Portfolio = () => {
       image: cart,
       technologies: ['Flutter', 'Dart', 'BLoC'],
       category: 'mobile',
-      githubUrl: '#'
+      githubUrl: 'https://github.com/Hafsusu/Market_Basket'
     },
     {
       id: 10,
@@ -115,7 +115,6 @@ const Portfolio = () => {
       image: hospital,
       technologies: ['Frappe', 'ERPNext', 'Python', 'MariaDB', 'Redis', 'Custom Workflows'],
       category: 'erp',
-      githubUrl: '#'
     },
     {
       id: 12,
