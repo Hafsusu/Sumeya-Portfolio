@@ -130,7 +130,7 @@ const Portfolio = () => {
     { key: 'all' as const, label: 'All Projects', count: projects.length },
     { key: 'web' as const, label: 'Web Apps', count: projects.filter(p => p.category === 'web').length },
     { key: 'mobile' as const, label: 'Mobile Apps', count: projects.filter(p => p.category === 'mobile').length },
-    { key: 'erp' as const, label: 'ERP Systems', count: projects.filter(p => p.category === 'erp').length }
+    { key: 'erp' as const, label: 'ERP', count: projects.filter(p => p.category === 'erp').length }
   ];
 
   useEffect(() => {
