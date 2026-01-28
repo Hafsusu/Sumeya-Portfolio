@@ -4,7 +4,7 @@ import Resume from '../../assets/Sumeya _Abesha_Resume.pdf'
 
 const About = () => {
   const stats = [
-    { number: '1+', label: 'Years Experience' },
+    { number: '2', label: 'Years Experience' },
     { number: '10+', label: 'Projects Completed' },
     { number: '10+', label: 'Happy Clients' },
     { number: '8+', label: 'Technologies' },

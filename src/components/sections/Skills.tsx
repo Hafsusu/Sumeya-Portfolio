@@ -11,9 +11,6 @@ import docker from '../../assets/docker.png';
 import git from '../../assets/social.png';
 import figma from '../../assets/figma.png';
 import tailwind from '../../assets/Tailwind_CSS_Logo.png';
-import photoshop from '../../assets/photoshop.png';
-import illustrator from '../../assets/illustrator.png';
-import php from '../../assets/php.png'
 import django from '../../assets/django.jpg';
 import mongo from '../../assets/mongo.webp';
 import postgres from '../../assets/postgresql.png';
@@ -31,7 +28,6 @@ const Skills = () => {
     { name: 'Node.js', icon: Node },
     { name: 'Python', icon: python },
     { name: 'Django', icon: django },
-    { name: 'PHP', icon: php },
     { name: 'MongoDB', icon: mongo },
     { name: 'PostgreSQL', icon: postgres },
     { name: 'MySQL', icon: mysql},
@@ -40,8 +36,6 @@ const Skills = () => {
     { name: 'Docker', icon: docker },
     { name: 'Git', icon: git },
     { name: 'Figma', icon: figma },
-    { name: 'Photoshop', icon: photoshop },
-    { name: 'Illustrator', icon: illustrator },
   ];
 
   const carouselRef = useRef<HTMLDivElement>(null);

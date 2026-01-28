@@ -17,27 +17,27 @@ const Services = () => {
     },
     {
       id: 2,
-      title: 'UI/UX Design',
-      description: 'Beautiful and intuitive user interfaces designed with user experience in mind. From wireframes to pixel-perfect implementations.',
-      icon: <Palette className="w-8 h-8" />
-    },
-    {
-      id: 3,
-      title: 'Mobile Development',
-      description: 'Cross-platform mobile applications using React Native. Native performance with shared codebase for iOS and Android.',
-      icon: <Tablet className="w-8 h-8" />
-    },
-    {
-      id: 4,
       title: 'API Development',
       description: 'RESTful and GraphQL APIs built with best practices. Secure, scalable, and well-documented backend services.',
       icon: <CodeXml className="w-8 h-8" />
     },
     {
-      id: 5,
+      id: 3,
+      title: 'Mobile Development',
+      description: 'Cross-platform mobile applications using React Native & Flutter. Native performance with shared codebase for iOS and Android.',
+      icon: <Tablet className="w-8 h-8" />
+    },
+    {
+      id: 4,
       title: 'DevOps & Deployment',
       description: 'CI/CD pipeline setup, cloud deployment, and infrastructure management. Ensuring your applications run smoothly in production.',
       icon: <Computer className="w-8 h-8" />
+    },
+    {
+      id: 5,
+      title: 'UI/UX Design',
+      description: 'Beautiful and intuitive user interfaces designed with user experience in mind. From wireframes to pixel-perfect implementations.',
+      icon: <Palette className="w-8 h-8" /> 
     },
     {
       id: 6,

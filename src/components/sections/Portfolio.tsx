@@ -58,9 +58,9 @@ const Portfolio = () => {
           }
         ],
         outcome: [
-          'Enabled centralized management of multiple expos',
-          'Reduced manual coordination overhead',
-          'Improved operational efficiency for event organizers'
+          'Centralized management of multiple expos within a single dashboard',
+          'Reduced manual registration and exhibitor coordination work by an estimated 30–40%',
+          'Cut event setup and update time from hours to minutes during active expos'
         ],
         improvements: [
           'Role-based permissions for large teams',
@@ -107,9 +107,9 @@ const Portfolio = () => {
       }
     ],
     outcome: [
-      'Improved access to veterinary services',
-      'Enabled structured service booking',
-      'Supported NGO impact tracking'
+      'Enabled farmers to discover and book veterinary services in a single flow',
+      'Reduced service booking friction by replacing manual coordination with structured scheduling',
+      'Provided NGOs with centralized visibility into service delivery and regional impact'
     ],
     improvements: [
       'Centralized Database',
@@ -160,9 +160,9 @@ const Portfolio = () => {
       }
     ],
     outcome: [
-      'Delivered a scalable backend for academic management',
-      'Improved consistency of student and academic data',
-      'Enabled future frontend and mobile integrations'
+      'Designed a normalized backend supporting multiple academic roles and workflows',
+      'Improved data integrity by enforcing structured relationships and validations',
+      'Prepared the system for future web and mobile clients via REST APIs'
     ],
     improvements: [
       'Parent portal integration',
@@ -209,9 +209,9 @@ const Portfolio = () => {
       }
     ],
     outcome: [
-      'Delivered a clean and professional company profile',
-      'Improved brand visibility',
-      'Provided a strong foundation for client acquisition'
+      'Replaced a weak or missing online presence with a clear, credible brand website',
+      'Reduced user confusion by clearly separating and explaining diverse services',
+      'Positioned the company for client inquiries and digital marketing efforts'
     ],
     improvements: [
       'CMS integration for content updates',
@@ -267,9 +267,9 @@ const Portfolio = () => {
       }
     ],
     outcome: [
-      'Delivered two functional mobile applications',
-      'Enabled remote consultations and reduced physical visit dependency',
-      'Improved continuity of care and patient-provider communication'
+      'Enabled patients to track symptoms, appointments, and consultations in one platform',
+      'Supported remote care workflows that reduced unnecessary physical visits',
+      'Strengthened continuity of care through consistent digital communication'
     ],
     improvements: [
       'Analytics dashboard for providers',
@@ -315,9 +315,9 @@ const Portfolio = () => {
         }
       ],
       outcome: [
-        'Improved provider efficiency',
-        'Enabled structured remote consultations',
-        'Reduced administrative overhead'
+        'Reduced time spent on patient coordination by consolidating workflows into a single app',
+        'Improved consultation turnaround through real-time communication tools',
+        'Minimized context switching for healthcare providers'
       ],
       improvements: [
         'Advanced analytics for patient outcomes',
@@ -368,9 +368,9 @@ const Portfolio = () => {
       }
     ],
     outcome: [
-      'Automated end-to-end loan processing',
-      'Improved loan tracking and reporting accuracy',
-      'Reduced manual errors in financial operations'
+      'Automated the full loan lifecycle from application to repayment',
+      'Reduced manual processing errors through validation and workflow enforcement',
+      'Improved visibility into loan performance and repayment status for decision-makers'
     ],
     improvements: [
       'Predictive risk analytics',
@@ -415,9 +415,9 @@ const Portfolio = () => {
         }
       ],
       outcome: [
-        'Streamlined microfinance operations',
-        'Improved loan and savings visibility',
-        'Enhanced reporting and compliance'
+        'Centralized loans, savings, and client management into a single ERP system',
+        'Improved visibility into individual and group lending performance',
+        'Enhanced compliance and reporting accuracy through structured financial records'
       ],
       improvements: [
         'Real time Notifications',
