@@ -1,10 +1,28 @@
+export interface CaseStudy {
+  problem: string;
+  goals: string[];
+  constraints: string[];
+  role: string;
+  decisions: {
+    title: string;
+    explanation: string;
+  }[];
+  challenges: {
+    challenge: string;
+    solution: string;
+  }[];
+  outcome: string[];
+  improvements: string[];
+}
+
 export interface Project {
   id: number;
   title: string;
-  description: string;
+  summary: string;
   image: string;
-  category: string
+  category: 'web' | 'mobile' | 'erp' | 'backend';
   technologies: string[];
+  caseStudy: CaseStudy;
   liveUrl?: string;
   githubUrl?: string;
 }

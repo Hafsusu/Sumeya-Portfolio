@@ -60,12 +60,12 @@ const Hero = () => {
           </h1>
           
           <h2 className="text-xl md:text-2xl lg:text-3xl text-gray-600 mb-8 font-medium">
-            Full Stack Developer & UI/UX Designer
+          Full Stack Developer building scalable web, mobile, and ERP systems
           </h2>
 
           <p className="text-lg md:text-xl text-gray-500 mb-12 max-w-2xl mx-auto leading-relaxed">
-            I create beautiful, functional, and user-centered digital experiences. 
-            With a passion for clean code and pixel-perfect design.
+          I design and build real-world applications, from healthcare and finance platforms
+          to enterprise management systems, focusing on clarity, reliability, and long-term maintainability.
           </p>
 
           <div className="flex justify-center gap-6 mb-12">

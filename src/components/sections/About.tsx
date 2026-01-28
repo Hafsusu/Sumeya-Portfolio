@@ -1,6 +1,6 @@
 import { Code, Laptop } from 'lucide-react';
 import aboutPhoto from '../../assets/sum_1.png'
-import Resume from '../../assets/Resume_Sumeya _Abesha.pdf'
+import Resume from '../../assets/Sumeya _Abesha_Resume.pdf'
 
 const About = () => {
   const stats = [
@@ -63,16 +63,15 @@ const About = () => {
             </h2>
             
             <p className="text-lg text-gray-600 leading-relaxed">
-              I'm a passionate full-stack developer with over 1 year of experience 
-              creating digital solutions that make a difference. I love turning complex 
-              problems into simple, beautiful designs.
+            I’m a full stack developer with hands-on experience building web, mobile, and ERP systems
+            used in real operational contexts, including healthcare, finance, education, and event management.
             </p>
 
             <p className="text-lg text-gray-600 leading-relaxed">
-              My journey in web development started with curiosity and has evolved 
-              into a career filled with continuous learning and exciting challenges. 
-              I believe in writing clean, efficient code and creating user experiences 
-              that are both intuitive and delightful.
+            Over the past years, I’ve worked with technologies like React, Flutter, Django, and ERPNext,
+            often in projects where reliability, security, and usability mattered more than flashy features.
+            I enjoy breaking down messy problems, asking the right questions, and designing solutions
+            that make both users and developers’ lives easier.
             </p>
 
             <div className="flex flex-wrap gap-3 pt-2">

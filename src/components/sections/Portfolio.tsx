@@ -1,20 +1,16 @@
 import { useState, useEffect } from 'react';
 import { ExternalLink, Github, ArrowLeft, ArrowRight } from 'lucide-react';
 import type { Project } from '../../types';
-import niembek from '../../assets/niembek.png'
-import eagle from '../../assets/eagle.png'
-import portfolio from '../../assets/portfolio.png'
-import longhorn from '../../assets/longhorn.png'
-import mobile from '../../assets/Initial_page.png'
-import cart from '../../assets/cart_new.png'
-import logo from '../../assets/fin_logo.webp'
-import sms from '../../assets/sms.png'
-import loan from '../../assets/loan.webp'
-import hospital from '../../assets/hospital.webp'
-import microfinance from '../../assets/microfinance.png'
+import niembek from '../../assets/niembek.png';
+import eagle from '../../assets/eagle.png';
+import mobile from '../../assets/Initial_page.png';
+import logo from '../../assets/habesha.png';
+import sms from '../../assets/sms.png';
+import loan from '../../assets/loan.webp';
+import microfinance from '../../assets/microfinance.png';
 
 const Portfolio = () => {
-  const [activeFilter, setActiveFilter] = useState<'all' | 'web' | 'mobile' | 'erp'>('all');
+  const [activeFilter, setActiveFilter] = useState<'all' | 'web' | 'mobile' | 'erp' | 'backend'>('all');
   const [currentSlide, setCurrentSlide] = useState(0);
   const [filteredProjects, setFilteredProjects] = useState<Project[]>([]);
 
@@ -22,115 +18,422 @@ const Portfolio = () => {
     {
       id: 1,
       title: 'Agency Organization & Expo Management',
-      description: 'Comprehensive website for an agency organization with integrated events and expo management system. Features include event registration, ticketing, exhibitor management, real-time updates, and admin dashboard for managing multiple events simultaneously.',
+      summary: 'Web-based platform for managing large-scale events and expos, including registration, ticketing, exhibitor management, and real-time administration.',
       image: niembek,
-      technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Node.js', 'MongoDB', 'Express'],
       category: 'web',
-      liveUrl: 'https://niembek.vercel.app/'
-    },
+      technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Node.js', 'MongoDB', 'Express'],
+      liveUrl: 'https://niembek.vercel.app/',
+      caseStudy: {
+        problem: 'Event organizations managing expos relied on spreadsheets and manual coordination, leading to errors in registration, exhibitor tracking, and real-time event updates.',
+        goals: [
+          'Centralize event and expo management into one platform',
+          'Support attendee registration and ticketing',
+          'Enable exhibitor management across multiple events',
+          'Provide admins with real-time operational visibility'
+        ],
+        constraints: [
+          'Multiple events running concurrently',
+          'High traffic during registration periods',
+          'Need for real-time updates without overloading the system'
+        ],
+        role: 'Full Stack Developer responsible for frontend architecture, backend API integration, and admin dashboard design.',
+        decisions: [
+          {
+            title: 'React + TypeScript for Frontend',
+            explanation: 'Improved maintainability and reduced runtime errors for a system expected to scale and evolve.'
+          },
+          {
+            title: 'MongoDB for Flexible Event Data',
+            explanation: 'Allowed dynamic handling of varying event and exhibitor data structures.'
+          }
+        ],
+        challenges: [
+          {
+            challenge: 'Managing multiple events simultaneously',
+            solution: 'Designed scalable data models and separated event-specific logic at both frontend and backend levels.'
+          },
+          {
+            challenge: 'Admin usability under time pressure',
+            solution: 'Built a clear dashboard with prioritized actions and real-time status indicators.'
+          }
+        ],
+        outcome: [
+          'Enabled centralized management of multiple expos',
+          'Reduced manual coordination overhead',
+          'Improved operational efficiency for event organizers'
+        ],
+        improvements: [
+          'Role-based permissions for large teams',
+          'Advanced analytics for attendee behavior',
+          'QR-based ticket validation'
+        ]
+      }
+    },    
     {
       id: 2,
       title: 'EAGLE Mobile Livestock Care Platform',
-      description: 'Website for livestock care organization connecting farmers with veterinary services. Includes farmer registration, service booking, veterinary product store, appointment scheduling, and impact dashboard. Focus on preventive care and community resilience.',
-      image: eagle,
-      technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Node.js', 'MongoDB', 'Map Integration'],
-      category: 'web',
-      liveUrl: 'https://eagle-nine.vercel.app/',
-    },
-    {
-      id: 3,
-      title: 'Driving School Management System',
-      description: 'Website for driving school with backend powered by Frappe/ERPNext. Features include course catalog, instructor profiles, student registration, schedule management, and payment integration. Seamless data flow between frontend and ERP backend.',
-      image: longhorn,
-      technologies: ['HTML5', 'CSS3', 'JavaScript', 'Frappe', 'ERPNext', 'REST API'],
-      category: 'web',
-      liveUrl: 'https://longhorncdl.com/',
-    },
-    {
-      id: 4,
-      title: 'International School Management Backend',
-      description: 'Backend system for school following Cambridge International curriculum. Manages student records, academic schedules, grading system, teacher assignments, and parent communication. Built with Django for scalability and security.',
-      image: sms,
-      technologies: ['Python', 'Django', 'PostgreSQL', 'Django REST', 'JWT'],
-      category: 'web',
-    },
+      summary: 'Web platform connecting farmers with veterinary services to improve preventive livestock care.',
+  image: eagle,
+  category: 'web',
+  technologies: ['React', 'TypeScript', 'Node.js', 'MongoDB', 'Map Integration'],
+  liveUrl: 'https://eagle-nine.vercel.app/',
+  caseStudy: {
+    problem: 'Small-scale farmers lacked timely access to veterinary services, leading to preventable livestock losses.',
+    goals: [
+      'Connect farmers with nearby veterinary services',
+      'Enable appointment scheduling and service tracking',
+      'Provide visibility into agricultural impact'
+    ],
+    constraints: [
+      'Low digital literacy among users',
+      'Unstable internet connectivity',
+      'NGO budget limitations'
+    ],
+    role: 'Frontend Developer responsible for UI architecture, API integration, and user experience design.',
+    decisions: [
+      {
+        title: 'Catalog-based Service Discovery',
+        explanation: 'Helped farmers finad veterinary services and livestock products.'
+      },
+      {
+        title: 'TypeScript for Reliability',
+        explanation: 'Reduced runtime errors and improved maintainability.'
+      }
+    ],
+    challenges: [
+      {
+        challenge: 'Designing for first-time digital users',
+        solution: 'Used large visual cues, simplified flows, and minimal form inputs.'
+      }
+    ],
+    outcome: [
+      'Improved access to veterinary services',
+      'Enabled structured service booking',
+      'Supported NGO impact tracking'
+    ],
+    improvements: [
+      'Centralized Database',
+      'Email-based notifications',
+      'Advanced analytics dashboard'
+    ]
+  }
+},
+{
+  id: 3,
+  title: 'International School Management Backend',
+  summary: 'Backend system for managing academic operations of a Cambridge International curriculum school.',
+  image: sms,
+  category: 'backend',
+  technologies: ['Python', 'Django', 'PostgreSQL', 'Django REST', 'JWT'],
+  caseStudy: {
+    problem: 'Schools following international curricula struggled with fragmented systems for academics, grading, and communication, increasing administrative workload.',
+    goals: [
+      'Centralize student and academic records',
+      'Support structured grading and reporting',
+      'Enable secure role-based access',
+      'Provide API-first backend for future integrations'
+    ],
+    constraints: [
+      'Strict academic data accuracy requirements',
+      'Need for scalable and secure backend',
+      'Multiple user roles with different permissions'
+    ],
+    role: 'Backend Developer responsible for database design, API development, and authentication mechanisms.',
+    decisions: [
+      {
+        title: 'Django for Rapid and Secure Development',
+        explanation: 'Provided a mature framework with strong security and scalability features.'
+      },
+      {
+        title: 'JWT Authentication',
+        explanation: 'Enabled stateless, secure access for multiple frontend clients.'
+      }
+    ],
+    challenges: [
+      {
+        challenge: 'Modeling complex academic relationships',
+        solution: 'Designed normalized database schemas to reflect curriculum structure, grading, and schedules.'
+      },
+      {
+        challenge: 'Ensuring data security',
+        solution: 'Implemented role-based permissions and token-based authentication.'
+      }
+    ],
+    outcome: [
+      'Delivered a scalable backend for academic management',
+      'Improved consistency of student and academic data',
+      'Enabled future frontend and mobile integrations'
+    ],
+    improvements: [
+      'Parent portal integration',
+      'Advanced reporting and analytics',
+      'Complex interlap between models handled'
+    ]
+  }
+},
+{
+  id: 4,
+  title: 'Habesha Advert Company Profile Website',
+  summary: 'Modern company profile website showcasing advertising, design, architecture, and software services.',
+  image: logo,
+  category: 'web',
+  technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Vite', 'Framer Motion', 'React Router'],
+  liveUrl: 'https://habesha-advert.vercel.app/',
+  caseStudy: {
+    problem: 'The company lacked a modern digital presence that clearly communicated its diverse services and professional credibility.',
+    goals: [
+      'Present services clearly and professionally',
+      'Strengthen brand identity',
+      'Improve client trust and lead generation'
+    ],
+    constraints: [
+      'Wide range of services to communicate',
+      'Need for fast loading and smooth animations',
+      'Marketing-focused rather than feature-heavy'
+    ],
+    role: 'Frontend Developer responsible for UI design, animations, and performance optimization.',
+    decisions: [
+      {
+        title: 'React + Vite for Performance',
+        explanation: 'Ensured fast build times and optimal page load performance.'
+      },
+      {
+        title: 'Framer Motion for Subtle Animations',
+        explanation: 'Used motion to enhance brand perception without distracting users.'
+      }
+    ],
+    challenges: [
+      {
+        challenge: 'Communicating multiple services without clutter',
+        solution: 'Structured content into clear sections with visual hierarchy.'
+      }
+    ],
+    outcome: [
+      'Delivered a clean and professional company profile',
+      'Improved brand visibility',
+      'Provided a strong foundation for client acquisition'
+    ],
+    improvements: [
+      'CMS integration for content updates',
+      'Email notifications for faster communication',
+    ]
+  }
+},
     {
       id: 5,
-      title: 'Fineto Company Profile Website',
-      description: 'Professional company profile website built with WordPress. Features responsive design, service showcase, team profiles, client testimonials, and contact forms. Focused on branding and lead generation.',
-      image: logo,
-      technologies: ['WordPress', 'PHP', 'Elementor', 'SEO Optimization'],
-      category: 'web',
-      liveUrl: 'https://fineto.fi/',
-    },
-    {
-      id: 6,
-      title: 'Personal Portfolio Website',
-      description: 'Modern portfolio website showcasing projects and skills. Features responsive design, smooth animations, project filtering, contact form, and performance optimization. Built with best practices in React and TypeScript.',
-      image: portfolio,
-      technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Vite', 'Framer Motion', 'React Router'],
-      category: 'web',
-      liveUrl: 'https://sumeya-portfolio-pi.vercel.app/',
-      githubUrl: 'https://github.com/Hafsusu/Sumeya-Portfolio'
-    },
+      title: 'Hopeline - Breast Cancer Patient Support',
+      summary: 'Mobile platform connecting breast cancer patients with healthcare providers through symptom tracking, consultations, and community support.',
+  image: mobile,
+  category: 'mobile',
+  technologies: ['Flutter', 'Dart', 'Laravel', 'LiveKit', 'WebRTC', 'Push Notifications'],
+  githubUrl: 'https://github.com/Makbel116/Final-Year-Project/tree/main/frontend',
+  caseStudy: {
+    problem: 'Breast cancer patients often experience fragmented care, poor follow-up, and limited emotional support due to disconnected healthcare systems.',
+    goals: [
+      'Centralize patient care tools into one platform',
+      'Enable remote consultations with healthcare providers',
+      'Support appointment management',
+      'Provide emotional and community support'
+    ],
+    constraints: [
+      'Sensitive medical data requiring secure handling',
+      'Users with varying levels of digital literacy',
+      'Mobile network instability',
+      'Limited project timeline'
+    ],
+    role: 'Mobile and Full Stack Developer responsible for app architecture, feature implementation, and real-time communication integration.',
+    decisions: [
+      {
+        title: 'Using Flutter for Mobile Development',
+        explanation: 'Flutter enabled rapid UI development with a single codebase for Android and iOS, reducing maintenance complexity.'
+      },
+      {
+        title: 'Separating Patient and Professional Apps',
+        explanation: 'Splitting the applications reduced UX complexity and improved role-based access control.'
+      },
+      {
+        title: 'LiveKit for Video Consultations',
+        explanation: 'Chosen for its scalability and low-latency real-time communication using WebRTC.'
+      }
+    ],
+    challenges: [
+      {
+        challenge: 'Maintaining video call stability on unreliable networks',
+        solution: 'Implemented optimized connection handling and session recovery strategies.'
+      },
+      {
+        challenge: 'Designing for non-technical users',
+        solution: 'Used simplified navigation, minimal UI elements, and consistent design patterns.'
+      }
+    ],
+    outcome: [
+      'Delivered two functional mobile applications',
+      'Enabled remote consultations and reduced physical visit dependency',
+      'Improved continuity of care and patient-provider communication'
+    ],
+    improvements: [
+      'Analytics dashboard for providers',
+      'AI-assisted symptom insights',
+      'Offline resources on breast cancer survival & medications'
+    ]
+  }},
+  {
+    id: 6,
+    title: 'Hopeline Professional – Healthcare Provider',
+    summary: 'Mobile application enabling healthcare professionals to manage breast cancer patients and conduct remote consultations.',
+    image: mobile,
+    category: 'mobile',
+    technologies: ['Flutter', 'Dart', 'Laravel', 'LiveKit', 'WebSocket'],
+    githubUrl: 'https://github.com/Makbel116/Final-Year-Project/tree/main/professional_app',
+    caseStudy: {
+      problem: 'Healthcare providers lacked a centralized tool to manage patient data, consultations, and follow-ups efficiently.',
+      goals: [
+        'Enable structured patient management',
+        'Support remote consultations',
+        'Improve continuity of care'
+      ],
+      constraints: [
+        'Strict data privacy requirements',
+        'Time-sensitive workflows',
+        'Need for reliable real-time communication'
+      ],
+      role: 'Mobile Developer responsible for provider-facing application architecture and real-time feature integration.',
+      decisions: [
+        {
+          title: 'Separate Provider Application',
+          explanation: 'Avoided overloading the patient app and ensured focused clinical workflows.'
+        },
+        {
+          title: 'WebSocket-Based Updates',
+          explanation: 'Enabled real-time synchronization of consultation data.'
+        }
+      ],
+      challenges: [
+        {
+          challenge: 'Balancing feature depth with usability',
+          solution: 'Prioritized core clinical workflows and minimized UI complexity.'
+        }
+      ],
+      outcome: [
+        'Improved provider efficiency',
+        'Enabled structured remote consultations',
+        'Reduced administrative overhead'
+      ],
+      improvements: [
+        'Advanced analytics for patient outcomes',
+        'AI-assisted treatment recommendations',
+        'Offline resources on breast cancer treatment'
+      ]
+    }
+  },  
     {
       id: 7,
-      title: 'Hopeline - Breast Cancer Patient Support',
-      description: 'Mobile app providing support system for breast cancer patients. Features include patient profiles, symptom tracking, appointment scheduling, community forum, and educational resources. Patient-facing application.',
-      image: mobile,
-      technologies: ['Flutter', 'Dart', 'Laravel', 'LiveKit', 'WebRTC', 'Push Notifications'],
-      category: 'mobile',
-      githubUrl: 'https://github.com/Makbel116/Final-Year-Project/tree/main/frontend'
-    },
-    {
-      id: 8,
-      title: 'Hopeline Professional - Healthcare Provider',
-      description: 'Healthcare provider application for managing breast cancer patients. Includes patient management, consultation scheduling, video consultations via LiveKit, medical record access, and treatment planning.',
-      image: mobile,
-      technologies: ['Flutter', 'Dart', 'Laravel', 'LiveKit', 'WebSocket', 'HIPAA Compliance'],
-      category: 'mobile',
-      githubUrl: 'https://github.com/Makbel116/Final-Year-Project/tree/main/professional_app'
-    },
-    {
-      id: 9,
-      title: 'MarketBasket - Digital Shopping Cart',
-      description: 'Mobile app for creating and managing shopping lists. Helps users organize shopping efficiently.',
-      image: cart,
-      technologies: ['Flutter', 'Dart', 'BLoC'],
-      category: 'mobile',
-      githubUrl: 'https://github.com/Hafsusu/Market_Basket'
-    },
-    {
-      id: 10,
       title: 'Custom Loan Management System',
-      description: 'Deep customization of ERPNext lending module for financial institution. Features include loan application processing, credit scoring, repayment scheduling, interest calculation, collateral management, and regulatory reporting.',
-      image: loan,
-      technologies: ['Frappe', 'ERPNext', 'Python', 'MariaDB', 'JavaScript', 'Custom APIs'],
-      category: 'erp',
-    },
-    {
-      id: 11,
-      title: 'Hospital Management System',
-      description: 'Comprehensive ERP for hospital management including patient registration, appointment scheduling, billing, pharmacy, lab management, and staff scheduling. Customized to meet specific hospital workflow requirements.',
-      image: hospital,
-      technologies: ['Frappe', 'ERPNext', 'Python', 'MariaDB', 'Redis', 'Custom Workflows'],
-      category: 'erp',
-    },
-    {
-      id: 12,
-      title: 'Microfinance Management System',
-      description: 'ERP system for microfinance institution managing loans, savings, client management, group lending, and financial reporting. Includes mobile banking integration and SMS notifications for clients.',
-      image: microfinance,
-      technologies: ['Frappe', 'ERPNext', 'Python', 'MariaDB', 'Redis', 'REST API'],
-      category: 'erp',
+      summary: 'Deep customization of ERPNext lending module for loan processing, risk analysis, and regulatory reporting.',
+  image: loan,
+  category: 'erp',
+  technologies: ['Frappe', 'ERPNext', 'Python', 'MariaDB', 'JavaScript'],
+  caseStudy: {
+    problem: 'Financial institutions relied on manual loan processing and fragmented systems, leading to inefficiencies and poor risk visibility.',
+    goals: [
+      'Automate loan lifecycle management',
+      'Enable credit scoring and repayment analysis',
+      'Integrate accounting and regulatory reporting',
+      'Support scalable financial operations'
+    ],
+    constraints: [
+      'Existing ERPNext architecture limitations',
+      'Strict financial accuracy requirements',
+      'Need for backward compatibility'
+    ],
+    role: 'ERP Developer responsible for customizing ERPNext modules, designing workflows, and implementing financial logic.',
+    decisions: [
+      {
+        title: 'Customizing ERPNext Instead of Building from Scratch',
+        explanation: 'Leveraged ERPNext’s existing accounting and ledger systems to reduce development time and risk.'
+      },
+      {
+        title: 'Workflow-Based Loan Processing',
+        explanation: 'Used Frappe workflows to enforce approval stages and compliance.'
+      }
+    ],
+    challenges: [
+      {
+        challenge: 'Complex repayment and interest calculations',
+        solution: 'Implemented custom server-side scripts with validation checks.'
+      },
+      {
+        challenge: 'Ensuring data consistency across modules',
+        solution: 'Used hooks and background jobs to synchronize loan and accounting data.'
+      }
+    ],
+    outcome: [
+      'Automated end-to-end loan processing',
+      'Improved loan tracking and reporting accuracy',
+      'Reduced manual errors in financial operations'
+    ],
+    improvements: [
+      'Predictive risk analytics',
+      'Advanced delinquency dashboards'
+    ]
+  }},
+  {
+    id: 8,
+    title: 'Microfinance Management System',
+    summary: 'ERP system for managing loans, savings, group lending, and financial reporting for microfinance institutions.',
+    image: microfinance,
+    category: 'erp',
+    technologies: ['Frappe', 'ERPNext', 'Python', 'MariaDB', 'Redis', 'REST API'],
+    caseStudy: {
+      problem: 'Microfinance institutions relied on disconnected tools, limiting visibility into loans, savings, and client performance.',
+      goals: [
+        'Centralize microfinance operations',
+        'Support individual and group lending',
+        'Improve financial reporting accuracy',
+        'Enable client communication via email'
+      ],
+      constraints: [
+        'Complex regulatory requirements',
+        'High transaction volumes',
+        'Need for reliability and data integrity'
+      ],
+      role: 'ERP Developer responsible for customizing ERPNext modules and financial workflows.',
+      decisions: [
+        {
+          title: 'ERPNext Customization',
+          explanation: 'Leveraged existing accounting and reporting features to reduce risk.'
+        },
+        {
+          title: 'Redis for Performance',
+          explanation: 'Improved system responsiveness under heavy load.'
+        }
+      ],
+      challenges: [
+        {
+          challenge: 'Managing group lending logic',
+          solution: 'Designed custom workflows and validation rules.'
+        }
+      ],
+      outcome: [
+        'Streamlined microfinance operations',
+        'Improved loan and savings visibility',
+        'Enhanced reporting and compliance'
+      ],
+      improvements: [
+        'Real time Notifications',
+        'Predictive risk analysis',
+        'Client credit scoring models'
+      ]
     }
+  }  
   ];
 
   const filters = [
     { key: 'all' as const, label: 'All Projects', count: projects.length },
     { key: 'web' as const, label: 'Web Apps', count: projects.filter(p => p.category === 'web').length },
     { key: 'mobile' as const, label: 'Mobile Apps', count: projects.filter(p => p.category === 'mobile').length },
-    { key: 'erp' as const, label: 'ERP', count: projects.filter(p => p.category === 'erp').length }
+    { key: 'erp' as const, label: 'ERP Systems', count: projects.filter(p => p.category === 'erp').length },
+    { key: 'backend' as const, label: 'Backend Systems', count: projects.filter(p => p.category === 'backend').length }
   ];
 
   useEffect(() => {
@@ -213,20 +516,20 @@ const Portfolio = () => {
           </button>
 
           <div className="bg-primary-50 rounded-3xl overflow-hidden">
-            <div className="grid lg:grid-cols-2">
-              <div className="relative h-64 lg:h-full min-h-[400px] bg-primary-50 to-primary-600">
-                <div className="inset-0 flex absolute items-center justify-center">
-                  <div className="text-center p-8">
+            <div className="flex flex-col">
+              <div className="relative bg-gradient-to-b from-primary-50 to-primary-100">
+                <div className="inset-0 flex items-center justify-center">
+                  <div className="text-center p-6 md:p-10">
                     <img
-                    src={currentProject.image}
-                    alt={currentProject.title}
-                    className="object-cover"
-                  />
+                      src={currentProject.image}
+                      alt={currentProject.title}
+                      className="w-full max-h-[360px] object-contain rounded-2xl shadow-md bg-white"
+                    />
                   </div>
                 </div>
-                
-                <div className="absolute top-6 left-6 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full">
-                  <span className="text-primary-600 font-bold">
+
+                <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full shadow-sm">
+                  <span className="text-primary-600 font-bold text-sm">
                     {currentSlide + 1} / {filteredProjects.length}
                   </span>
                 </div>
@@ -242,7 +545,7 @@ const Portfolio = () => {
                 </h3>
 
                 <p className="text-gray-600 leading-relaxed mb-8 text-lg">
-                  {currentProject.description}
+                  {currentProject.summary}
                 </p>
 
                 <div className="mb-10">
@@ -260,6 +563,106 @@ const Portfolio = () => {
                     ))}
                   </div>
                 </div>
+
+                {currentProject.caseStudy && (
+                  <div className="mb-10 space-y-8">
+                    <div>
+                      <h4 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-2">
+                        Project Context
+                      </h4>
+                      <p className="text-gray-700 leading-relaxed">
+                        {currentProject.caseStudy.problem}
+                      </p>
+                    </div>
+
+                    <div className="grid md:grid-cols-2 gap-6">
+                      <div>
+                        <h4 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-2">
+                          Goals
+                        </h4>
+                        <ul className="list-disc list-inside text-gray-700 space-y-1">
+                          {currentProject.caseStudy.goals.map((goal, index) => (
+                            <li key={index}>{goal}</li>
+                          ))}
+                        </ul>
+                      </div>
+
+                      <div>
+                        <h4 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-2">
+                          Constraints
+                        </h4>
+                        <ul className="list-disc list-inside text-gray-700 space-y-1">
+                          {currentProject.caseStudy.constraints.map((item, index) => (
+                            <li key={index}>{item}</li>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div className="grid md:grid-cols-2 gap-6">
+                      <div>
+                        <h4 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-2">
+                          My Role
+                        </h4>
+                        <p className="text-gray-700 leading-relaxed">
+                          {currentProject.caseStudy.role}
+                        </p>
+                      </div>
+
+                      <div>
+                        <h4 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-2">
+                          Outcomes
+                        </h4>
+                        <ul className="list-disc list-inside text-gray-700 space-y-1">
+                          {currentProject.caseStudy.outcome.map((item, index) => (
+                            <li key={index}>{item}</li>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div className="grid md:grid-cols-2 gap-6">
+                      <div>
+                        <h4 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-2">
+                          Key Decisions
+                        </h4>
+                        <ul className="space-y-3">
+                          {currentProject.caseStudy.decisions.map((decision, index) => (
+                            <li key={index} className="text-gray-700">
+                              <p className="font-semibold text-gray-900">{decision.title}</p>
+                              <p className="text-gray-700 text-sm">{decision.explanation}</p>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+
+                      <div>
+                        <h4 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-2">
+                          Challenges & Solutions
+                        </h4>
+                        <ul className="space-y-3">
+                          {currentProject.caseStudy.challenges.map((item, index) => (
+                            <li key={index} className="text-gray-700">
+                              <p className="font-semibold text-gray-900">{item.challenge}</p>
+                              <p className="text-gray-700 text-sm">{item.solution}</p>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div>
+                      <h4 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-2">
+                        Improvements
+                      </h4>
+                      <ul className="list-disc list-inside text-gray-700 space-y-1">
+                        {currentProject.caseStudy.improvements.map((item, index) => (
+                          <li key={index}>{item}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                )}
 
                 <div className="flex flex-wrap gap-4">
                   {currentProject.liveUrl && (
