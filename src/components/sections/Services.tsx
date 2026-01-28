@@ -1,4 +1,4 @@
-import { CodeXml, Computer, Globe, Handshake, Palette, Tablet } from 'lucide-react';
+import { CodeXml, Globe, Handshake, Tablet } from 'lucide-react';
 
 const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -29,18 +29,6 @@ const Services = () => {
     },
     {
       id: 4,
-      title: 'DevOps & Deployment',
-      description: 'CI/CD pipeline setup, cloud deployment, and infrastructure management. Ensuring your applications run smoothly in production.',
-      icon: <Computer className="w-8 h-8" />
-    },
-    {
-      id: 5,
-      title: 'UI/UX Design',
-      description: 'Beautiful and intuitive user interfaces designed with user experience in mind. From wireframes to pixel-perfect implementations.',
-      icon: <Palette className="w-8 h-8" /> 
-    },
-    {
-      id: 6,
       title: 'Consulting',
       description: 'Technical consulting and code reviews. Helping teams improve their development processes and code quality.',
       icon: <Handshake className="w-8 h-8" />
@@ -59,7 +47,7 @@ const Services = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
           {services.map((service) => (
             <div
               key={service.id}
