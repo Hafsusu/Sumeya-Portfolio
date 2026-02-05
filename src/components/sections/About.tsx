@@ -1,6 +1,6 @@
 import { Code, Laptop } from 'lucide-react';
 import aboutPhoto from '../../assets/sum_1.png'
-import Resume from '../../assets/Sumeya _Abesha_CV.pdf'
+import Resume from '../../assets/Sumeya_Abesha_CV.pdf'
 
 const About = () => {
   const stats = [
